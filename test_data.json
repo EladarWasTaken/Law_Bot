@@ -1,0 +1,34 @@
+{
+  "court_case_types": [
+	{
+	  "case_type": "Divorce",
+	  "required_details": ["Date of Marriage", "Children Involved"]
+	},
+	{
+	  "case_type": "Theft",
+	  "required_details": ["Date of Incident", "Location of Incident"]
+	},
+	{
+	  "case_type": "Car Accident",
+	  "required_details": ["Date of Incident", "Location of Incident", "Driver's Condition"]
+	}
+  ],
+  "law_firms": [
+	{
+	  "name": "Firm A",
+	  "supported_cases": ["Divorce", "Theft"],
+	  "required_documents": {
+		"Divorce": ["Marriage Certificate", "Children's Documents"],
+		"Theft": ["Theft Report", "Police Report"]
+	  }
+	},
+	{
+	  "name": "Firm B",
+	  "supported_cases": ["Car Accident"],
+	  "required_documents": {
+		"Car Accident": ["Accident Report", "Vehicle Documents", "Medical Certificate"]
+	  }
+	}
+  ],
+  "consultation_requests": []
+}

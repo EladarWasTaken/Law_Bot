@@ -1,0 +1,83 @@
+{
+    "court_case_types": [
+        {
+            "case_type": "Divorce",
+            "required_details": [
+                "date of marriage"
+            ]
+        },
+        {
+            "case_type": "Theft",
+            "required_details": [
+                "date of incident",
+                "place of incident"
+            ]
+        },
+        {
+            "case_type": "Murder",
+            "required_details": [
+                "date of incident",
+                "place of incident"
+            ]
+        },
+        {
+            "case_type": "Road Accident",
+            "required_details": [
+                "date of incident",
+                "place of incident",
+                "condition of the driver"
+            ]
+        }
+    ],
+    "law_firms": [
+        {
+            "name": "Firm A",
+            "supported_cases": [
+                "Divorce",
+                "Theft"
+            ],
+            "required_documents": {
+                "Divorce": [
+                    "Marriage certificate"
+                ],
+                "Theft": [
+                    "Theft report",
+                    "Police protocal"
+                ]
+            }
+        },
+        {
+            "name": "Firm B",
+            "supported_cases": [
+                "Murder",
+                "Road Accident"
+            ],
+            "required_documents": {
+                "Murder": [
+                    "Passport",
+                    "Criminal record"
+                ],
+                "Road Accident": [
+                    "Road accident protocal",
+                    "Car documents",
+                    "Medical certificate"
+                ]
+            }
+        }
+    ],
+    "consultation_requests": [
+        {
+            "user_id": "user123",
+            "case_type": "Murder",
+            "details": {
+                "date of incident": "01-01-2010",
+                "place of incident": "Moscow"
+            },
+            "selected_firm": "Firm A",
+            "provided_documents": [
+                "Passport",
+                "Criminal record"
+            ]
+        }
+    ]
+}
