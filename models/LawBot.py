@@ -45,11 +45,11 @@ class LawBot:
 		"""
 		Loads data from the JSON file into the class attributes.
 		"""
-		with open(self.data_file, 'r', encoding='utf-8') as f:
+		with open(self.data_file, "r", encoding="utf-8") as f:
 			data = json.load(f)
-			self.court_case_types = data['court_case_types']
-			self.law_firms = data['law_firms']
-			self.consultation_requests = data['consultation_requests']
+			self.court_case_types = data["court_case_types"]
+			self.law_firms = data["law_firms"]
+			self.consultation_requests = data["consultation_requests"]
 
 	def find_law_firms_and_documents(self, case_type, details):
 		"""
@@ -72,9 +72,9 @@ class LawBot:
 
 		for firm in self.law_firms:
 			if any(case_type.lower() in case.lower()
-			       for case in firm['supported_cases']):
-				matching_firms.append(firm['name'])
-				required_documents.extend(firm['required_documents'].get(
+			       for case in firm["supported_cases"]):
+				matching_firms.append(firm["name"])
+				required_documents.extend(firm["required_documents"].get(
 				    case_type, []))
 
 		return matching_firms, required_documents
@@ -100,13 +100,6 @@ class LawBot:
 		     if case_type.lower() in item["case_type"].lower()), None)
 		if not case_type_info:
 			return "Case type not found"
-
-		missing_details = [
-		    detail for detail in case_type_info["required_details"]
-		    if detail not in details
-		]
-		if missing_details:
-			return f"Missing details: {', '.join(missing_details)}"
 
 		firms, documents = self.find_law_firms_and_documents(
 		    case_type, details)

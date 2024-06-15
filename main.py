@@ -5,7 +5,7 @@ import discord
 
 from models.LawBot import LawBot
 
-dataFilePath = 'data.json'
+dataFilePath = "data.json"
 bot = LawBot(dataFilePath)
 
 TOKEN = os.environ["TOKEN"]
@@ -35,7 +35,7 @@ async def on_message(message):
     message : discord.Message
         The message object that triggered the event.
     """
-    if message.content.startswith('!consultation'):
+    if message.content.startswith("!consultation"):
         await message.channel.send("Enter case type:")
 
         def check(m):
@@ -55,7 +55,7 @@ async def on_message(message):
             return m.author == message.author and m.channel == message.channel
 
         try:
-            case_type_msg = await client.wait_for('message', check=check, timeout=60.0)
+            case_type_msg = await client.wait_for("message", check=check, timeout=60.0)
             case_type = case_type_msg.content.strip()
 
             case_type_info = next(

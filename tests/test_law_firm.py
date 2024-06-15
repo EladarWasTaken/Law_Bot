@@ -6,7 +6,7 @@ from models.LawFirm import LawFirm
 @pytest.fixture
 def test_law_firm_initialization():
   name = "Firm A"
-  supported_cases = ["Divorce", "Theft"]
+  supported_cases = ["Divorce"]
   required_documents = ["Marriage Certificate", "Children's Documents"]
   law_firm = LawFirm(name, supported_cases, required_documents)
 

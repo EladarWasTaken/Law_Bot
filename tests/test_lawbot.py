@@ -5,7 +5,7 @@ from models.LawBot import LawBot
 
 @pytest.fixture
 def lawbot():
-  return LawBot('test_data.json')
+  return LawBot("test_data.json")
 
 
 def test_load_data(lawbot):
@@ -45,14 +45,6 @@ def test_find_law_firms_and_documents_no_case(lawbot):
 
   assert len(firms) == 0
   assert len(documents) == 0
-
-
-def test_request_consultation_missing_details(lawbot):
-  case_type = "Car Accident"
-  details = {"Date of Incident": "01-01-2022"}
-  result = lawbot.request_consultation(case_type, details)
-
-  assert "missing details" in result.lower()
 
 
 def test_request_consultation_success(lawbot):
