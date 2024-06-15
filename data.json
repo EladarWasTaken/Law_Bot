@@ -41,8 +41,8 @@
                     "Marriage certificate"
                 ],
                 "Theft": [
-                    "Theft report",
-                    "Police protocal"
+                    "Loss documentation",
+                    "Police report"
                 ]
             }
         },
@@ -58,7 +58,7 @@
                     "Criminal record"
                 ],
                 "Road Accident": [
-                    "Road accident protocal",
+                    "Road accident report",
                     "Car documents",
                     "Medical certificate"
                 ]

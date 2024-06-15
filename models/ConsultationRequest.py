@@ -1,5 +1,5 @@
 class ConsultationRequest:
-	"""
+  """
 	A class to represent a consultation request.
 
 	Attributes
@@ -21,9 +21,8 @@ class ConsultationRequest:
 		Initializes the ConsultationRequest with the given parameters.
 	"""
 
-	def __init__(self, user_id, case_type, details, selected_firm,
-	             provided_documents):
-		"""
+  def __init__(self, user_id, case_type, details, selected_firm, provided_documents):
+    """
 		Constructs all the necessary attributes for the ConsultationRequest object.
 
 		Parameters
@@ -39,8 +38,8 @@ class ConsultationRequest:
 		provided_documents : list
 			The list of documents provided for the consultation.
 		"""
-		self.user_id = user_id
-		self.case_type = case_type
-		self.details = details
-		self.selected_firm = selected_firm
-		self.provided_documents = provided_documents
+    self.user_id = user_id
+    self.case_type = case_type
+    self.details = details
+    self.selected_firm = selected_firm
+    self.provided_documents = provided_documents
