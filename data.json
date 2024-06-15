@@ -74,7 +74,7 @@
                 "place of incident": "Moscow"
             },
             "selected_firm": "Firm A",
-            "provided_documents": [
+            "required_documents": [
                 "Passport",
                 "Criminal record"
             ]
