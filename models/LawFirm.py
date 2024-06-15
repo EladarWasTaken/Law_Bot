@@ -9,7 +9,8 @@ class LawFirm:
 	supported_cases : list
 		A list of case types supported by the law firm.
 	required_documents : dict
-		A dictionary where the key is the case type and the value is a list of required documents.
+		A dictionary where the key is the case type and the value is a list of required
+		documents.
 
 	Methods
 	-------
@@ -28,7 +29,8 @@ class LawFirm:
 		supported_cases : list
 			A list of case types supported by the law firm.
 		required_documents : dict
-			A dictionary where the key is the case type and the value is a list of required documents.
+			A dictionary where the key is the case type and the value is a list of
+			required documents.
 		"""
     self.name = name
     self.supported_cases = supported_cases

@@ -3,7 +3,8 @@ import json
 
 class LawBot:
 	"""
-	A class to represent a bot that helps users find law firms and required documents for specific court cases.
+	A class to represent a bot that helps users find law firms and required documents
+	for specific court cases.
 
 	Attributes
 	----------
@@ -65,7 +66,8 @@ class LawBot:
 		Returns
 		-------
 		tuple
-			A tuple containing a list of matching law firms and a list of required documents.
+			A tuple containing a list of matching law firms and a list of required
+			documents.
 		"""
 		matching_firms = []
 		required_documents = []
@@ -93,7 +95,8 @@ class LawBot:
 		Returns
 		-------
 		str or dict
-			A message indicating an error or a dictionary containing the matching law firms and required documents.
+			A message indicating an error or a dictionary containing the matching law
+			firms and required documents.
 		"""
 		case_type_info = next(
 		    (item for item in self.court_case_types

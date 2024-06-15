@@ -26,8 +26,10 @@ async def on_message(message):
     """
     Event handler for when a message is sent in a channel the bot has access to.
 
-    If the message starts with '!consultation', the bot initiates a consultation request process by asking the user
-    to enter the case type and details required for the case. The bot then responds with available law firms and 
+    If the message starts with '!consultation', the bot initiates a consultation request
+    process by asking the user
+    to enter the case type and details required for the case. The bot then responds with
+    available law firms and 
     necessary documents for the consultation.
 
     Parameters
@@ -40,7 +42,8 @@ async def on_message(message):
 
         def check(m):
             """
-            Check function to ensure the response is from the same author and channel as the original message.
+            Check function to ensure the response is from the same author and channel as
+            the original message.
 
             Parameters
             ----------
@@ -50,7 +53,8 @@ async def on_message(message):
             Returns
             -------
             bool
-                True if the message author and channel match the original message, False otherwise.
+                True if the message author and channel match the original message, False
+                otherwise.
             """
             return m.author == message.author and m.channel == message.channel
 
@@ -59,7 +63,8 @@ async def on_message(message):
             case_type = case_type_msg.content.strip()
 
             case_type_info = next(
-                (item for item in bot.court_case_types if case_type.lower() in item["case_type"].lower()), None)
+                (item for item in bot.court_case_types if case_type.lower() in 
+                 item["case_type"].lower()), None)
             if not case_type_info:
                 await message.channel.send("Case type not found. Try again later.")
                 return

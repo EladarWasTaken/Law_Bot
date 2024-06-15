@@ -11,7 +11,8 @@ def test_consultation_request_initialization():
   selected_firm = "Law Firm ABC"
   provided_documents = ["doc1.pdf", "doc2.pdf"]
 
-  consultation_request = ConsultationRequest(user_id, case_type, details, selected_firm, provided_documents)
+  consultation_request = ConsultationRequest(user_id, case_type, details, selected_firm, 
+                                             provided_documents)
 
   assert consultation_request.user_id == user_id
   assert consultation_request.case_type == case_type
@@ -27,7 +28,8 @@ def test_consultation_request_initialization_empty():
   selected_firm = ""
   provided_documents = []
 
-  consultation_request = ConsultationRequest(user_id, case_type, details, selected_firm, provided_documents)
+  consultation_request = ConsultationRequest(user_id, case_type, details, selected_firm,
+                                             provided_documents)
 
   assert consultation_request.user_id == user_id
   assert consultation_request.case_type == case_type
@@ -43,7 +45,8 @@ def test_consultation_request_initialization_with_none():
   selected_firm = None
   provided_documents = None
 
-  consultation_request = ConsultationRequest(user_id, case_type, details, selected_firm, provided_documents)
+  consultation_request = ConsultationRequest(user_id, case_type, details, selected_firm, 
+                                             provided_documents)
 
   assert consultation_request.user_id == user_id
   assert consultation_request.case_type == case_type
